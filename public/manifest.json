@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Chess Stoppa",
+    "version": "1.0.0",
+    "description": "Please use you time on chess dot com",
+    "background": {
+        "service_worker": "service-worker.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
