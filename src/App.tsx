@@ -46,11 +46,11 @@ function main() {
   countdownText.textContent = 'Chess Stopa Active'
   dialogBox.appendChild(countdownText)
 
-  function updateRangeValue() {
+  const updateRangeValue = () => {
     rangeValueDisplay.textContent = `Freeze time: ${timeBetweenTurns.value}`
   }
 
-  function isVisible(element: any) {
+  const isVisible = (element: any) => {
     return !!(element.offsetWidth || element.offsetHeight || element.getClientRects().length);
   }
 
@@ -132,6 +132,8 @@ function main() {
           document.documentElement.style.setProperty('pointer-events', 'auto')
           document.body.style.backgroundColor = DEFAULT_COLOR
           clearInterval(timer) // Stop the interval
+          checkIfGameIsOver()
+
         }
       }, 1000)     
     }
